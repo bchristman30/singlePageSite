@@ -7,6 +7,10 @@ import { ParallaxSectionComponent } from './core/parallax-section/parallax.compo
 import { ExpertiseComponent } from './core/expertise/expertise.component';
 import { ContactComponent } from './core/contact/contact.component';
 import { MyWorkComponent } from './core/my-work/my-work.component';
+import { FooterComponent } from './core/footer/footer.component';
+
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -16,10 +20,14 @@ import { MyWorkComponent } from './core/my-work/my-work.component';
     ParallaxSectionComponent,
     ExpertiseComponent,
     ContactComponent,
-    MyWorkComponent
+    MyWorkComponent,
+    FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBMC0J078zYmMuul4kPvj_1FKzIS56WVGI'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
